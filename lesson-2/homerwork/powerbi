@@ -1,0 +1,68 @@
+1. List three data sources Power BI can connect to.
+
+Microsoft Excel
+
+SQL Server Database
+
+Web API
+
+2. What is the first step to import data into Power BI Desktop?
+
+Click “Get Data” on the Home ribbon va ma’lumot manbasini tanlash.
+
+3. How do you refresh imported data in Power BI?
+
+Home → Refresh tugmasini bosish yoki Right-click → Refresh dataset ustida.
+
+4. What file formats can Power BI import directly? (Name two.)
+
+.xlsx (Excel)
+
+.csv (Comma-Separated Values)
+
+5. What does the "Navigator" window show after selecting a data source?
+
+Manbadan olingan jadvallar yoki ma’lumotlar ro‘yxatini va Preview (oldindan ko‘rish) oynasini ko‘rsatadi.
+
+6. Import Sales_Data.csv and load only the "Product" and "Price" columns.
+
+Get Data → Text/CSV → Select Sales_Data.csv → Transform Data → Choose Columns (Product, Price) → Load.
+
+7. How would you change OrderDate to a date format during import?
+
+Transform Data → Select OrderDate column → Data Type dropdown → Date tanlash.
+
+8. What is the difference between "Load" and "Transform Data" in the import dialog?
+
+Load → Ma’lumotni darhol Power BI’ga yuklaydi.
+
+Transform Data → Power Query Editor’ni ochib, ma’lumotni tozalash/formatlash imkonini beradi.
+
+9. Why might you see an error when connecting to a SQL database? (Name one reason.)
+
+Noto‘g‘ri server nomi yoki autentifikatsiya ma’lumotlari.
+
+10. How do you replace a data source after importing it?
+
+Home → Transform Data → Data Source Settings → Change Source…
+
+11. Write the M-code to import only rows where Quantity > 1.
+
+m
+Копировать код
+= Table.SelectRows(Source, each [Quantity] > 1)
+12. How would you change the data source if Sales_Data.csv changed?
+
+Data Source Settings → Change Source orqali yangi fayl manzilini ko‘rsatish.
+
+13. Troubleshoot: Your CSV import fails due to a "mixed data type" error—how do you fix it?
+
+Power Query’da ustun tipini Text yoki korrekt turga majburan o‘zgartirish, so‘ng kerakli turga konvertatsiya qilish.
+
+14. Connect to a live SQL database with parameters (e.g., filter by year).
+
+Power Query’da Manage Parameters orqali yil parametrini yaratish, so‘ng SQL query ichida WHERE YEAR(OrderDate) = @YearParam qo‘llash.
+
+15. How would you automate data imports using Power BI and Power Automate?
+
+Power Automate’da Scheduled Flow yaratib, manbadan ma’lumotni yangilash va Power BI dataset’ini Refresh Dataset action orqali avtomatik yangilash.
